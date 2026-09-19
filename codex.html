@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aura Nomada crea viajes memorables con itinerarios premium, hoteles seleccionados y experiencias disenadas para enamorar desde el primer clic.">
+    <meta name="keywords" content="agencia de viajes, viajes premium, luna de miel, paquetes turisticos, viajes internacionales, escapadas">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#081426">
+    <meta property="og:title" content="Aura Nomada | Agencia de Viajes">
+    <meta property="og:description" content="Viajes curados con hoteles, rutas y experiencias pensadas para convertir deseo en reserva.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aura Nomada | Agencia de Viajes">
+    <meta name="twitter:description" content="Escapadas, lunas de miel y circuitos premium con una experiencia de compra clara y aspiracional.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80">
+    <title>Aura Nomada | Agencia de Viajes</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23081426'/%3E%3Cpath d='M12 47 27 17h4l15 30h-7l-3-6H22l-3 6Zm13-12h8l-4-8Z' fill='%23f0b44c'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#inicio">Ir al contenido principal</a>
+    <header class="site-header">
+        <nav class="nav">
+            <div class="nav-top">
+                <a class="brand" href="#inicio" aria-label="Aura Nomada inicio">
+                    <span class="brand-mark">AN</span>
+                    <span class="brand-copy">
+                        <strong>Aura Nomada</strong>
+                        <small>Travel Atelier</small>
+                    </span>
+                </a>
+
+                <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <div class="nav-links" id="navMenu">
+                <a href="#destinos">Destinos</a>
+                <a href="#paquetes">Paquetes</a>
+                <a href="#colecciones">Colecciones</a>
+                <a href="#proceso">Proceso</a>
+                <a href="#redes">Redes</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contacto" class="nav-cta">Cotizar viaje</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-backdrop" aria-hidden="true">
+                <video class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80">
+                    <source src="https://videos.pexels.com/video-files/28192743/aerial-coastal-drone.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="hero-grid">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow">Agencia boutique para viajes con alto impacto emocional</p>
+                    <h1>Viajes que hacen que reservar se sienta tan emocionante como llegar.</h1>
+                    <p class="hero-text">
+                        Creamos escapadas, lunas de miel y circuitos premium con vuelos, hoteles, traslados y experiencias curadas.
+                        Tu unico trabajo es elegir con quien quieres ir.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#destinos" class="button button-solid">Explorar destinos</a>
+                        <a href="#servicios" class="button button-ghost">Ver experiencias</a>
+                    </div>
+
+                    <div class="hero-metrics" aria-label="Indicadores de confianza">
+                        <div>
+                            <strong>+480</strong>
+                            <span>viajes reservados este ano</span>
+                        </div>
+                        <div>
+                            <strong>98%</strong>
+                            <span>clientes que nos recomiendan</span>
+                        </div>
+                        <div>
+                            <strong>24 hrs</strong>
+                            <span>para recibir una propuesta</span>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="trip-planner reveal" aria-label="Planeador rapido de viaje">
+                    <p class="planner-tag">Planea tu siguiente salida</p>
+                    <h2>Recibe una propuesta lista para enamorar.</h2>
+
+                    <form class="planner-form" id="plannerForm">
+                        <label>
+                            Destino ideal
+                            <select name="destino">
+                                <option value="Santorini y Atenas">Santorini y Atenas</option>
+                                <option value="Bali y Ubud">Bali y Ubud</option>
+                                <option value="Tokio y Kioto">Tokio y Kioto</option>
+                                <option value="Riviera Maya">Riviera Maya</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            Tipo de viaje
+                            <select name="tipo">
+                                <option value="Luna de miel">Luna de miel</option>
+                                <option value="Viaje en pareja">Viaje en pareja</option>
+                                <option value="Vacaciones familiares">Vacaciones familiares</option>
+                                <option value="Escapada con amigos">Escapada con amigos</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            Fecha estimada
+                            <input type="text" name="fecha" placeholder="Julio 2026">
+                        </label>
+
+                        <label>
+                            Presupuesto por persona
+                            <select name="presupuesto">
+                                <option value="$15,000 a $25,000 MXN">$15,000 a $25,000 MXN</option>
+                                <option value="$25,000 a $40,000 MXN">$25,000 a $40,000 MXN</option>
+                                <option value="$40,000 a $60,000 MXN">$40,000 a $60,000 MXN</option>
+                                <option value="Mas de $60,000 MXN">Mas de $60,000 MXN</option>
+                            </select>
+                        </label>
+
+                        <button type="submit" class="button button-solid planner-button">Quiero mi propuesta</button>
+                    </form>
+
+                    <p class="form-status" id="plannerStatus" aria-live="polite"></p>
+                    <p class="planner-note">Respuesta personalizada por correo con ruta, hoteleria sugerida y rango de inversion.</p>
+                </aside>
+            </div>
+        </section>
+
+        <section class="trust-band">
+            <div class="trust-grid">
+                <p>Hoteles seleccionados por ubicacion, servicio y valor real.</p>
+                <p>Asesoria humana de principio a fin, sin respuestas automaticas.</p>
+                <p>Itinerarios listos para comprar, compartir y reservar.</p>
+            </div>
+        </section>
+
+        <section class="section collections" id="colecciones">
+            <div class="section-head section-head-split">
+                <div>
+                    <p class="section-kicker">Colecciones editoriales</p>
+                    <h2>Viajes agrupados por estilo de vida, no solo por destino.</h2>
+                </div>
+                <p>
+                    Esta capa ayuda a que la persona se identifique rapido con una propuesta. En lugar de pensar demasiado, reconoce un tipo de viaje hecho para ella y avanza hacia la compra.
+                </p>
+            </div>
+
+            <div class="collection-grid">
+                <article class="collection-card reveal">
+                    <img src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?auto=format&fit=crop&w=900&q=80" alt="Pareja disfrutando una terraza con vista al mar">
+                    <div class="collection-copy">
+                        <span class="collection-badge">Romance</span>
+                        <h3>Honeymoon Edit</h3>
+                        <p>Escenarios de alto impacto visual, suites con encanto y experiencias privadas que vuelven memorable cada detalle.</p>
+                        <ul class="feature-list">
+                            <li>Hoteles con upgrade sujeto a disponibilidad</li>
+                            <li>Cenas especiales y momentos sorpresa</li>
+                            <li>Ritmo relajado con espacio para disfrutar</li>
+                        </ul>
+                        <a href="#contacto">Recibir propuesta</a>
+                    </div>
+                </article>
+
+                <article class="collection-card reveal">
+                    <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=900&q=80" alt="Familia caminando en una playa clara">
+                    <div class="collection-copy">
+                        <span class="collection-badge">Familias</span>
+                        <h3>Family Signature</h3>
+                        <p>Viajes que equilibran comodidad, seguridad y experiencias que emocionan tanto a adultos como a ninos.</p>
+                        <ul class="feature-list">
+                            <li>Horarios comodos y traslados resueltos</li>
+                            <li>Actividades con buen balance entre descanso y diversion</li>
+                            <li>Opciones all inclusive y hoteles family friendly</li>
+                        </ul>
+                        <a href="#contacto">Quiero esta coleccion</a>
+                    </div>
+                </article>
+
+                <article class="collection-card reveal">
+                    <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=900&q=80" alt="Persona explorando un paisaje natural de montanas">
+                    <div class="collection-copy">
+                        <span class="collection-badge">Aventura suave</span>
+                        <h3>Escape and Explore</h3>
+                        <p>Perfecta para viajeros que quieren moverse, descubrir y volver con fotos, historias y sensacion de logro.</p>
+                        <ul class="feature-list">
+                            <li>Rutas panoramicas y experiencias inmersivas</li>
+                            <li>Logistica simple para recorrer mas sin agotarse</li>
+                            <li>Actividades curadas con nivel de confort alto</li>
+                        </ul>
+                        <a href="#contacto">Cotizar aventura</a>
+                    </div>
+                </article>
+
+                <article class="collection-card reveal">
+                    <img src="https://images.unsplash.com/photo-1501556424050-d4816356b73e?auto=format&fit=crop&w=900&q=80" alt="Piscina infinita en un hotel de lujo">
+                    <div class="collection-copy">
+                        <span class="collection-badge">Lujo relajado</span>
+                        <h3>Resort and Reset</h3>
+                        <p>Una seleccion pensada para descansar de verdad con spa, gastronomia, paisajes premium y cero friccion operativa.</p>
+                        <ul class="feature-list">
+                            <li>Resorts y villas con atmosfera exclusiva</li>
+                            <li>Concierge, wellness y momentos de descanso real</li>
+                            <li>Ideal para aniversarios o viajes de celebracion</li>
+                        </ul>
+                        <a href="#contacto">Ver opciones premium</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section destinations" id="destinos">
+            <div class="section-head">
+                <p class="section-kicker">Destinos con efecto wow</p>
+                <h2>Rutas pensadas para que el deseo de viajar se convierta en reserva.</h2>
+                <p>
+                    Cada propuesta combina estancias visualmente memorables, experiencias con alta percepcion de valor y una logistica clara para que comprar sea una decision facil.
+                </p>
+            </div>
+
+            <div class="destination-grid">
+                <article class="destination-card reveal">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Bali con mar turquesa y hotel tropical">
+                    <div class="destination-copy">
+                        <span class="pill">7 noches | Todo armonizado</span>
+                        <h3>Bali y Ubud</h3>
+                        <p>Villa privada, beach club, rituales de bienestar y una experiencia sensorial de principio a fin.</p>
+                        <div class="card-footer">
+                            <strong>Desde $34,900 MXN</strong>
+                            <a href="#contacto">Quiero este viaje</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="destination-card reveal">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80" alt="Santorini con casas blancas y vista al mar">
+                    <div class="destination-copy">
+                        <span class="pill">6 noches | Favorito en pareja</span>
+                        <h3>Santorini y Atenas</h3>
+                        <p>Suites con vista al caldera, cenas al atardecer y recorridos que se sienten de pelicula.</p>
+                        <div class="card-footer">
+                            <strong>Desde $28,900 MXN</strong>
+                            <a href="#contacto">Reservar experiencia</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="destination-card reveal">
+                    <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=900&q=80" alt="Ciudad japonesa iluminada de noche">
+                    <div class="destination-copy">
+                        <span class="pill">9 noches | Cultura y estilo</span>
+                        <h3>Tokio y Kioto</h3>
+                        <p>Un recorrido premium entre energia urbana, tradicion japonesa y hoteles con diseno impecable.</p>
+                        <div class="card-footer">
+                            <strong>Desde $42,500 MXN</strong>
+                            <a href="#contacto">Cotizar ruta</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section packages-section" id="paquetes">
+            <div class="section-head section-head-split">
+                <div>
+                    <p class="section-kicker">Paquetes estrella</p>
+                    <h2>Niveles de viaje claros para decidir mas rapido y comprar con confianza.</h2>
+                </div>
+                <p>
+                    Cuando una persona entiende con rapidez que cambia entre un formato y otro, el sitio deja de sentirse aspiracional nada mas y empieza a funcionar como una propuesta comercial seria.
+                </p>
+            </div>
+
+            <div class="package-grid">
+                <article class="package-card reveal">
+                    <div class="package-top">
+                        <span class="package-tag">Entrada premium</span>
+                        <h3>Escapada Select</h3>
+                        <p>Para aniversarios, puentes y viajes cortos con muy buena hoteleria y decisiones ya resueltas.</p>
+                    </div>
+                    <div class="package-price">
+                        <strong>Desde $18,900 MXN</strong>
+                        <span>3 a 4 noches</span>
+                    </div>
+                    <ul class="package-list">
+                        <li>Hotel 4 estrellas superior o boutique</li>
+                        <li>Traslado principal y agenda sugerida</li>
+                        <li>Ideal para parejas o mini celebraciones</li>
+                    </ul>
+                    <div class="package-bottom">
+                        <span>Rapida de decidir y facil de reservar</span>
+                        <a href="#contacto">Quiero esta opcion</a>
+                    </div>
+                </article>
+
+                <article class="package-card featured-package reveal">
+                    <div class="package-top">
+                        <span class="package-tag">Mas solicitado</span>
+                        <h3>Viaje Signature</h3>
+                        <p>El balance ideal entre impacto visual, confort, experiencias clave y sensacion de viaje bien cuidado.</p>
+                    </div>
+                    <div class="package-price">
+                        <strong>Desde $34,900 MXN</strong>
+                        <span>6 a 8 noches</span>
+                    </div>
+                    <ul class="package-list">
+                        <li>Hoteles con fuerte valor percibido</li>
+                        <li>Ruta armada con momentos memorables</li>
+                        <li>Perfecto para lunas de miel y viajes en pareja</li>
+                    </ul>
+                    <div class="package-bottom">
+                        <span>La opcion con mejor equilibrio general</span>
+                        <a href="#contacto">Apartar asesoria</a>
+                    </div>
+                </article>
+
+                <article class="package-card reveal">
+                    <div class="package-top">
+                        <span class="package-tag">Alta personalizacion</span>
+                        <h3>Grand Tour Tailor</h3>
+                        <p>Un viaje multi destino con ritmo curado, mayor complejidad operativa y experiencia premium de principio a fin.</p>
+                    </div>
+                    <div class="package-price">
+                        <strong>Desde $58,000 MXN</strong>
+                        <span>9 a 14 noches</span>
+                    </div>
+                    <ul class="package-list">
+                        <li>Dos o mas ciudades con logistica resuelta</li>
+                        <li>Experiencias privadas o de alto valor</li>
+                        <li>Ideal para viajeros que quieren aprovechar cada dia</li>
+                    </ul>
+                    <div class="package-bottom">
+                        <span>Hecho para viajes grandes y mas ambiciosos</span>
+                        <a href="#contacto">Disenar mi ruta</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="package-compare reveal">
+                <div class="compare-header">
+                    <strong>Que cambia entre niveles</strong>
+                    <span>Todos los paquetes se ajustan a fechas, numero de viajeros, destino y presupuesto final.</span>
+                </div>
+
+                <div class="compare-grid">
+                    <article class="compare-item">
+                        <h4>Hoteleria</h4>
+                        <p>Select prioriza ubicacion y comodidad. Signature sube el nivel visual y de experiencia. Grand Tour combina estancias premium segun cada parada.</p>
+                    </article>
+
+                    <article class="compare-item">
+                        <h4>Experiencias</h4>
+                        <p>Select sugiere lo esencial. Signature integra momentos de alto impacto. Grand Tour construye una narrativa completa de viaje.</p>
+                    </article>
+
+                    <article class="compare-item">
+                        <h4>Ritmo del itinerario</h4>
+                        <p>Select es simple y ligero. Signature equilibra descanso y planes. Grand Tour optimiza varios destinos sin perder claridad.</p>
+                    </article>
+
+                    <article class="compare-item">
+                        <h4>Acompanamiento</h4>
+                        <p>Los tres incluyen soporte, pero Signature y Grand Tour suelen requerir mas ajustes finos y seguimiento cercano.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section journey-section" id="proceso">
+            <div class="journey-layout">
+                <div class="journey-copy">
+                    <p class="section-kicker">Como trabajamos</p>
+                    <h2>Un proceso claro para que comprar un viaje se sienta facil y emocionante.</h2>
+                    <p>
+                        La mayoria de las personas no abandonan por falta de interes, sino por exceso de incertidumbre. Por eso el proceso esta explicado, acotado y visualmente ordenado.
+                    </p>
+
+                    <div class="journey-steps">
+                        <article class="journey-step reveal">
+                            <span class="step-number">01</span>
+                            <div>
+                                <h3>Escuchamos la idea</h3>
+                                <p>Nos compartes fechas, presupuesto, acompanantes y el tipo de experiencia que te gustaria vivir.</p>
+                            </div>
+                        </article>
+
+                        <article class="journey-step reveal">
+                            <span class="step-number">02</span>
+                            <div>
+                                <h3>Disenamos la propuesta</h3>
+                                <p>Armamos una ruta con hoteles, vuelos, traslados y experiencias alineadas con lo que imaginas.</p>
+                            </div>
+                        </article>
+
+                        <article class="journey-step reveal">
+                            <span class="step-number">03</span>
+                            <div>
+                                <h3>Ajustamos contigo</h3>
+                                <p>Pulimos detalles, resolvemos dudas y afinamos el plan para que se sienta completamente tuyo.</p>
+                            </div>
+                        </article>
+
+                        <article class="journey-step reveal">
+                            <span class="step-number">04</span>
+                            <div>
+                                <h3>Reservas y acompanamiento</h3>
+                                <p>Confirmamos servicios, te compartimos la ruta final y seguimos cerca durante todo el viaje.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <aside class="journey-panel reveal">
+                    <p class="planner-tag">Lo que recibes</p>
+                    <h3>Una propuesta lista para comparar, compartir y reservar.</h3>
+
+                    <div class="journey-summary">
+                        <div>
+                            <strong>Ruta clara</strong>
+                            <span>Con noches, vuelos y conexiones ordenadas para entender el viaje de inmediato.</span>
+                        </div>
+                        <div>
+                            <strong>Hoteleria con criterio</strong>
+                            <span>Seleccionada por ubicacion, experiencia y relacion entre percepcion de lujo y precio.</span>
+                        </div>
+                        <div>
+                            <strong>Experiencias sugeridas</strong>
+                            <span>Actividades, gastronomia y momentos especiales alineados al tipo de viajero.</span>
+                        </div>
+                        <div>
+                            <strong>Soporte cercano</strong>
+                            <span>Ayuda antes y durante el viaje para resolver cambios o dudas importantes.</span>
+                        </div>
+                    </div>
+
+                    <div class="journey-note">
+                        <strong>Tiempo de entrega habitual:</strong>
+                        <span>Entre 24 y 48 horas para recibir una primera propuesta personalizada.</span>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section experiences" id="servicios">
+            <div class="section-head">
+                <p class="section-kicker">Experiencias listas para vender</p>
+                <h2>Servicios disenados para que el cliente sienta que todo ya esta resuelto.</h2>
+            </div>
+
+            <div class="experience-grid">
+                <article class="experience-card reveal">
+                    <span class="experience-label">Escapada express</span>
+                    <h3>City Break Premium</h3>
+                    <p>Perfecto para puentes largos o aniversarios con hoteles bien ubicados, traslados y recomendaciones de autor.</p>
+                    <ul>
+                        <li>Vuelos redondos</li>
+                        <li>Hotel 4 o 5 estrellas</li>
+                        <li>Itinerario editable</li>
+                    </ul>
+                    <div class="experience-bottom">
+                        <strong>Desde $12,500 MXN</strong>
+                        <a href="#contacto">Cotizar</a>
+                    </div>
+                </article>
+
+                <article class="experience-card reveal featured-experience">
+                    <span class="experience-label">Mas elegido</span>
+                    <h3>Luna de Miel Signature</h3>
+                    <p>Una propuesta romantica con upgrades, cenas especiales, detalles sorpresa y tiempos pensados para disfrutar sin prisas.</p>
+                    <ul>
+                        <li>Hoteles con encanto</li>
+                        <li>Experiencias privadas</li>
+                        <li>Atencion prioritaria</li>
+                    </ul>
+                    <div class="experience-bottom">
+                        <strong>Desde $39,900 MXN</strong>
+                        <a href="#contacto">Apartar asesoria</a>
+                    </div>
+                </article>
+
+                <article class="experience-card reveal">
+                    <span class="experience-label">Viaje de descubrimiento</span>
+                    <h3>Circuito Multi Destino</h3>
+                    <p>Ideal para quienes quieren aprovechar cada dia con una ruta clara, conexiones resueltas y experiencias que justifican la inversion.</p>
+                    <ul>
+                        <li>2 o 3 ciudades en un viaje</li>
+                        <li>Soporte en ruta</li>
+                        <li>Visitas imprescindibles</li>
+                    </ul>
+                    <div class="experience-bottom">
+                        <strong>Desde $31,800 MXN</strong>
+                        <a href="#contacto">Ver propuesta</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section concierge-section">
+            <div class="section-head section-head-split">
+                <div>
+                    <p class="section-kicker">Cobertura del servicio</p>
+                    <h2>Mucho mas que reservar vuelos: resolvemos la experiencia completa.</h2>
+                </div>
+                <p>
+                    Una pagina completa tambien necesita explicar con claridad que se compra. Este bloque convierte el servicio en algo concreto, medible y deseable.
+                </p>
+            </div>
+
+            <div class="concierge-grid">
+                <article class="concierge-item reveal">
+                    <h3>Vuelos y upgrades</h3>
+                    <p>Buscamos conexiones funcionales, horarios inteligentes y oportunidades de mejorar la experiencia.</p>
+                </article>
+
+                <article class="concierge-item reveal">
+                    <h3>Hoteles con identidad</h3>
+                    <p>Seleccionamos estancias que eleven el viaje en lugar de solo servir como lugar para dormir.</p>
+                </article>
+
+                <article class="concierge-item reveal">
+                    <h3>Traslados privados</h3>
+                    <p>Reducimos friccion con recepcion en aeropuerto, transportes programados y trayectos claros.</p>
+                </article>
+
+                <article class="concierge-item reveal">
+                    <h3>Experiencias curadas</h3>
+                    <p>Reservamos actividades con potencial real de convertirse en el mejor recuerdo del viaje.</p>
+                </article>
+
+                <article class="concierge-item reveal">
+                    <h3>Momentos de celebracion</h3>
+                    <p>Aniversarios, lunas de miel y fechas especiales con detalles pensados para sorprender.</p>
+                </article>
+
+                <article class="concierge-item reveal">
+                    <h3>Soporte durante ruta</h3>
+                    <p>Seguimiento humano por si surge un ajuste, una duda o un cambio de ultimo momento.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section value-section">
+            <div class="value-layout">
+                <div class="value-copy">
+                    <p class="section-kicker">Por que compra la gente</p>
+                    <h2>Porque viajar contigo no se siente como llenar formularios, sino como empezar algo grande.</h2>
+                    <p>
+                        Convertimos una idea suelta en una propuesta clara, aspiracional y simple de contratar. Eso baja la friccion y aumenta el deseo de compra.
+                    </p>
+                </div>
+
+                <div class="value-grid">
+                    <article class="value-item reveal">
+                        <div class="value-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" role="img">
+                                <path d="M3 12h18M12 3l9 9-9 9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <h3>Proceso veloz</h3>
+                        <p>La propuesta llega con precio, idea visual y pasos concretos para decidir rapido.</p>
+                    </article>
+
+                    <article class="value-item reveal">
+                        <div class="value-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" role="img">
+                                <path d="M12 3l7 4v5c0 5-3.4 8-7 9-3.6-1-7-4-7-9V7l7-4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="m9.5 12.5 1.7 1.7 3.4-3.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <h3>Confianza total</h3>
+                        <p>Hoteles, traslados y actividades seleccionadas con criterio real, no por volumen.</p>
+                    </article>
+
+                    <article class="value-item reveal">
+                        <div class="value-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" role="img">
+                                <path d="M12 2.8 14.9 9l6.8.8-5 4.7 1.3 6.7-6-3.3-6 3.3 1.3-6.7-5-4.7L9.1 9 12 2.8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <h3>Experiencia premium</h3>
+                        <p>Cada viaje esta pensado para sentirse especial desde la primera pantalla.</p>
+                    </article>
+
+                    <article class="value-item reveal">
+                        <div class="value-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" role="img">
+                                <path d="M12 7v5l3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M21 12a9 9 0 1 1-2.6-6.4A8.9 8.9 0 0 1 21 12Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <h3>Acompaniamiento real</h3>
+                        <p>Seguimos cerca antes, durante y despues del viaje para cuidar cada detalle.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section testimonials" id="testimonios">
+            <div class="section-head centered-light">
+                <p class="section-kicker">Historias que convencen</p>
+                <h2>Quien viaja una vez, vuelve porque sabe como se siente estar bien cuidado.</h2>
+            </div>
+
+            <div class="testimonial-grid">
+                <article class="testimonial-card reveal">
+                    <div class="testimonial-head">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80" alt="Retrato de Claudia, clienta de Aura Nomada">
+                        <div class="testimonial-person">
+                            <strong>Claudia y Mario</strong>
+                            <span>Luna de miel en Grecia</span>
+                        </div>
+                        <span class="rating-pill">5.0</span>
+                    </div>
+                    <p>"Nos mandaron una propuesta tan clara y bonita que terminamos reservando la misma semana. El viaje supero todo y se sintio muy nuestro."</p>
+                    <div class="testimonial-tags">
+                        <span>9 noches</span>
+                        <span>Santorini</span>
+                        <span>Experiencias privadas</span>
+                    </div>
+                </article>
+
+                <article class="testimonial-card reveal">
+                    <div class="testimonial-head">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=300&q=80" alt="Retrato de Fernanda, clienta de Aura Nomada">
+                        <div class="testimonial-person">
+                            <strong>Fernanda R.</strong>
+                            <span>Escapada a Los Cabos</span>
+                        </div>
+                        <span class="rating-pill">5.0</span>
+                    </div>
+                    <p>"Yo solo queria celebrar mi aniversario, y terminaron armando una experiencia que parecia sacada de una revista. Todo fue simple de decidir."</p>
+                    <div class="testimonial-tags">
+                        <span>4 noches</span>
+                        <span>Aniversario</span>
+                        <span>Hotel frente al mar</span>
+                    </div>
+                </article>
+
+                <article class="testimonial-card reveal">
+                    <div class="testimonial-head">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80" alt="Retrato de Jorge, cliente de Aura Nomada">
+                        <div class="testimonial-person">
+                            <strong>Jorge M.</strong>
+                            <span>Circuito Japon clasico</span>
+                        </div>
+                        <span class="rating-pill">5.0</span>
+                    </div>
+                    <p>"Lo que mas valore fue la tranquilidad. Todo estaba coordinado y se noto muchisimo en la calidad del viaje y en la manera de presentarlo."</p>
+                    <div class="testimonial-tags">
+                        <span>11 noches</span>
+                        <span>Tokio y Kioto</span>
+                        <span>Ruta multi ciudad</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section social-section" id="redes">
+            <div class="social-layout">
+                <div class="social-copy">
+                    <p class="section-kicker">Redes sociales</p>
+                    <h2>Inspiramos el viaje antes de que la reserva ocurra.</h2>
+                    <p>
+                        Nuestras redes funcionan como escaparate visual, fuente de confianza y canal directo para personas que todavia estan sonando su siguiente viaje. Aqui descubren destinos, guardan ideas y nos escriben cuando ya quieren cotizar.
+                    </p>
+
+                    <div class="social-stats">
+                        <div>
+                            <strong>+18k</strong>
+                            <span>personas siguiendo ideas de viaje y escapadas premium</span>
+                        </div>
+                        <div>
+                            <strong>4.9/5</strong>
+                            <span>nivel de interaccion en publicaciones de clientes y destinos</span>
+                        </div>
+                        <div>
+                            <strong>Diario</strong>
+                            <span>contenido con hoteles, rutas, tips y momentos de viaje reales</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-grid">
+                    <article class="social-card reveal">
+                        <div class="social-card-head">
+                            <span class="social-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" role="img">
+                                    <rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"></rect>
+                                    <circle cx="12" cy="12" r="3.8" fill="none" stroke="currentColor" stroke-width="1.8"></circle>
+                                    <circle cx="17.2" cy="6.8" r="1" fill="currentColor"></circle>
+                                </svg>
+                            </span>
+                            <div>
+                                <h3>Instagram</h3>
+                                <p>@aldo_cazaresss</p>
+                            </div>
+                        </div>
+                        <p>Inspiracion visual, momentos de viaje y contenido pensado para que tus proximos clientes imaginen su siguiente salida.</p>
+                        <a href="https://instagram.com/aldo_cazaresss" target="_blank" rel="noreferrer">Seguir en Instagram</a>
+                    </article>
+
+                    <article class="social-card reveal">
+                        <div class="social-card-head">
+                            <span class="social-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" role="img">
+                                    <path d="M4 7.5A2.5 2.5 0 0 1 6.5 5h11A2.5 2.5 0 0 1 20 7.5v9a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 16.5Z" fill="none" stroke="currentColor" stroke-width="1.8"></path>
+                                    <path d="m5.8 7 5.3 4.5a1.4 1.4 0 0 0 1.8 0L18.2 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                            <div>
+                                <h3>Correo</h3>
+                                <p>macaldo565@gmail.com</p>
+                            </div>
+                        </div>
+                        <p>Canal ideal para solicitar cotizaciones detalladas, compartir fechas, presupuesto y recibir seguimiento directo.</p>
+                        <a href="mailto:macaldo565@gmail.com">Enviar correo</a>
+                    </article>
+
+                    <article class="social-card reveal">
+                        <div class="social-card-head">
+                            <span class="social-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" role="img">
+                                    <path d="M6.4 5.5h11.2A1.9 1.9 0 0 1 19.5 7.4v7.2a1.9 1.9 0 0 1-1.9 1.9H12l-3.5 2v-2H6.4a1.9 1.9 0 0 1-1.9-1.9V7.4a1.9 1.9 0 0 1 1.9-1.9Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path>
+                                    <path d="M8 9.4h8M8 12.4h5.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+                                </svg>
+                            </span>
+                            <div>
+                                <h3>Telefono</h3>
+                                <p>8118444102</p>
+                            </div>
+                        </div>
+                        <p>Perfecto para llamadas, seguimiento rapido y contacto directo con personas que ya quieren avanzar con su viaje.</p>
+                        <a href="tel:8118444102">Llamar ahora</a>
+                    </article>
+
+                    <article class="social-card reveal">
+                        <div class="social-card-head">
+                            <span class="social-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" role="img">
+                                    <path d="M20 11.4c0 4.3-3.8 7.8-8.5 7.8-.8 0-1.6-.1-2.3-.3L4 20.5l1.7-4.9c-.8-1.2-1.2-2.6-1.2-4.2 0-4.3 3.8-7.8 8.5-7.8S20 7.1 20 11.4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path>
+                                    <path d="M9.1 9.3c.2-.5.4-.6.8-.6h.7c.2 0 .4.1.5.4l.6 1.4c.1.2.1.4 0 .6l-.5 1c.4.7 1 1.3 1.8 1.8l.9-.5c.2-.1.4-.1.6 0l1.5.6c.2.1.3.3.3.5v.7c0 .4-.2.6-.6.8-.4.2-.8.2-1.2.2-3.6-.4-6.4-3.2-6.8-6.8 0-.4 0-.8.2-1.1Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                            <div>
+                                <h3>WhatsApp</h3>
+                                <p>+52 8118444102</p>
+                            </div>
+                        </div>
+                        <p>Canal mas rapido para resolver dudas, pedir una cotizacion express y avanzar del interes a la conversacion.</p>
+                        <a href="https://wa.me/528118444102?text=Hola%2C%20quiero%20cotizar%20un%20viaje" target="_blank" rel="noreferrer">Escribir por WhatsApp</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section faq-section" id="faq">
+            <div class="faq-layout">
+                <div class="faq-copy">
+                    <p class="section-kicker">Preguntas frecuentes</p>
+                    <h2>La informacion correcta baja dudas y acelera la decision.</h2>
+                    <p>
+                        Estas respuestas ayudan a que la persona entienda como funciona el servicio, que esperar y en que momento reservar. Tambien hacen que la pagina se sienta mucho mas completa.
+                    </p>
+                    <a href="#contacto" class="button button-solid faq-button">Quiero hablar con un asesor</a>
+                </div>
+
+                <div class="faq-list">
+                    <details class="faq-item reveal" open>
+                        <summary>Cuanto tardan en enviarme una propuesta personalizada?</summary>
+                        <p>Lo habitual es entre 24 y 48 horas, dependiendo de la complejidad del viaje y del numero de destinos incluidos.</p>
+                    </details>
+
+                    <details class="faq-item reveal">
+                        <summary>Ustedes solo venden paquetes ya armados?</summary>
+                        <p>No. Podemos partir de una coleccion sugerida o construir una ruta desde cero segun presupuesto, fechas, estilo y preferencias.</p>
+                    </details>
+
+                    <details class="faq-item reveal">
+                        <summary>Pueden ayudarme si aun no decido el destino?</summary>
+                        <p>Si. De hecho es uno de los puntos donde mas valor aportamos, porque podemos proponerte opciones segun clima, experiencia deseada y presupuesto.</p>
+                    </details>
+
+                    <details class="faq-item reveal">
+                        <summary>Incluyen soporte si surge un cambio durante el viaje?</summary>
+                        <p>Si, te acompanamos durante la ruta para apoyarte con ajustes importantes, reconfirmaciones y orientacion general.</p>
+                    </details>
+
+                    <details class="faq-item reveal">
+                        <summary>Trabajan viajes nacionales e internacionales?</summary>
+                        <p>Si. Disenamos escapadas dentro de Mexico, circuitos internacionales y viajes multi destino con distintos niveles de inversion.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact-cta" id="contacto">
+            <div class="contact-shell">
+                <div class="contact-panel">
+                    <div>
+                        <p class="section-kicker">Listo para vender el siguiente viaje</p>
+                        <h2>Haz que la decision mas dificil sea elegir destino.</h2>
+                        <p>Escribenos y te preparamos una propuesta visual, clara y lista para reservar.</p>
+                    </div>
+
+                    <div class="contact-facts">
+                        <div>
+                            <strong>Respuesta rapida</strong>
+                            <span>Te contactamos en menos de 24 horas.</span>
+                        </div>
+                        <div>
+                            <strong>Atencion personalizada</strong>
+                            <span>Sin bots, sin respuestas genericas y con seguimiento real.</span>
+                        </div>
+                        <div>
+                            <strong>Canal directo</strong>
+                            <span>macaldo565@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-shortcuts">
+                        <a class="contact-chip" href="https://wa.me/528118444102?text=Hola%2C%20quiero%20cotizar%20un%20viaje" target="_blank" rel="noreferrer">WhatsApp directo</a>
+                        <a class="contact-chip" href="mailto:macaldo565@gmail.com">Correo de atencion</a>
+                        <a class="contact-chip" href="tel:8118444102">Llamar al 8118444102</a>
+                    </div>
+                </div>
+
+                <form class="contact-form reveal" id="contactForm">
+                    <div class="contact-form-grid">
+                        <label>
+                            Nombre
+                            <input type="text" name="nombre" placeholder="Tu nombre" required>
+                        </label>
+
+                        <label>
+                            Correo
+                            <input type="email" name="correo" placeholder="tu@correo.com" required>
+                        </label>
+
+                        <label>
+                            Tipo de viaje
+                            <select name="tipo">
+                                <option value="Luna de miel">Luna de miel</option>
+                                <option value="Vacaciones familiares">Vacaciones familiares</option>
+                                <option value="Viaje en pareja">Viaje en pareja</option>
+                                <option value="Escapada premium">Escapada premium</option>
+                                <option value="Circuito multi destino">Circuito multi destino</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            Fecha tentativa
+                            <input type="text" name="fecha" placeholder="Octubre 2026">
+                        </label>
+                    </div>
+
+                    <label>
+                        Cuentanos que te gustaria vivir
+                        <textarea name="mensaje" rows="6" placeholder="Destino sonado, numero de viajeros, presupuesto aproximado o cualquier detalle importante."></textarea>
+                    </label>
+
+                    <div class="contact-actions">
+                        <button type="submit" class="button button-solid">Enviar solicitud</button>
+                        <a class="button button-ghost dark-ghost" href="mailto:macaldo565@gmail.com?subject=Cotizacion%20de%20viaje">Prefiero escribir por correo</a>
+                    </div>
+
+                    <p class="form-status" id="contactStatus" aria-live="polite"></p>
+                    <p class="planner-note">Al enviar este formulario se abrira tu cliente de correo con la solicitud lista para enviarse.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-branding">
+                <div class="brand footer-brand">
+                    <span class="brand-mark">AN</span>
+                    <span class="brand-copy">
+                        <strong>Aura Nomada</strong>
+                        <small>Travel Atelier</small>
+                    </span>
+                </div>
+                <p>Diseno de viajes con estrategia, estilo y deseo de compra para personas que quieren algo mas que una reserva.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explora</h3>
+                <a href="#destinos">Destinos</a>
+                <a href="#paquetes">Paquetes estrella</a>
+                <a href="#colecciones">Colecciones</a>
+                <a href="#proceso">Proceso</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Servicios</h3>
+                <a href="#servicios">Experiencias</a>
+                <a href="#redes">Redes sociales</a>
+                <a href="#faq">Preguntas frecuentes</a>
+                <a href="#contacto">Cotizacion personalizada</a>
+                <a href="#privacidad">Aviso de privacidad</a>
+                <a href="#terminos">Terminos</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <a href="mailto:macaldo565@gmail.com">macaldo565@gmail.com</a>
+                <a href="tel:8118444102">8118444102</a>
+                <a href="https://wa.me/528118444102?text=Hola%2C%20quiero%20cotizar%20un%20viaje" target="_blank" rel="noreferrer">WhatsApp prioritario</a>
+                <p>Lunes a sabado</p>
+                <p>09:00 a 19:00 hrs</p>
+            </div>
+        </div>
+
+        <div class="legal-grid">
+            <details class="legal-card" id="privacidad">
+                <summary>Aviso de privacidad</summary>
+                <p>Los datos compartidos en esta pagina se usan unicamente para preparar propuestas de viaje, dar seguimiento comercial y mantener comunicacion relacionada con tu solicitud.</p>
+            </details>
+
+            <details class="legal-card" id="terminos">
+                <summary>Terminos de servicio</summary>
+                <p>Precios, disponibilidad, cambios y condiciones finales pueden variar segun fechas, destino y proveedores. Cada viaje se confirma con propuesta y validacion final.</p>
+            </details>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Aura Nomada Travel Atelier</p>
+            <p>Experiencias curadas para viajar mejor.</p>
+        </div>
+    </footer>
+
+    <a class="whatsapp-float" href="https://wa.me/528118444102?text=Hola%2C%20quiero%20cotizar%20un%20viaje" target="_blank" rel="noreferrer" aria-label="Escribir por WhatsApp">
+        <span class="whatsapp-icon">
+            <svg viewBox="0 0 24 24" role="img">
+                <path d="M20 11.4c0 4.3-3.8 7.8-8.5 7.8-.8 0-1.6-.1-2.3-.3L4 20.5l1.7-4.9c-.8-1.2-1.2-2.6-1.2-4.2 0-4.3 3.8-7.8 8.5-7.8S20 7.1 20 11.4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path>
+                <path d="M9.1 9.3c.2-.5.4-.6.8-.6h.7c.2 0 .4.1.5.4l.6 1.4c.1.2.1.4 0 .6l-.5 1c.4.7 1 1.3 1.8 1.8l.9-.5c.2-.1.4-.1.6 0l1.5.6c.2.1.3.3.3.5v.7c0 .4-.2.6-.6.8-.4.2-.8.2-1.2.2-3.6-.4-6.4-3.2-6.8-6.8 0-.4 0-.8.2-1.1Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </span>
+        <span class="whatsapp-copy">
+            <strong>WhatsApp</strong>
+            <small>Respuesta rapida</small>
+        </span>
+    </a>
+    <script src="script.js"></script>
+</body>
+</html>
